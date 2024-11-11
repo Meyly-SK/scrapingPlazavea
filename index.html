@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reto Scraping</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            width: 350px;
+            margin: 0;
+            padding: 20px;
+            background-color: #f4f4f9;
+            box-sizing: border-box;
+        }
+
+        h3 {
+            text-align: center;
+            font-size: 24px;
+            color: #333;
+            margin-bottom: 20px;
+        }
+
+        button {
+            width: 100%;
+            padding: 10px;
+            margin: 5px 0;
+            background-color: #4CAF50;
+            color: white;
+            font-size: 16px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        button:hover {
+            background-color: #45a049;
+        }
+
+        #categories, #products {
+            margin-top: 20px;
+            max-height: 300px;
+            overflow-y: auto;
+            padding: 10px;
+            background-color: #fff;
+            border-radius: 5px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        .category, .product {
+            padding: 10px;
+            margin-bottom: 10px;
+            background-color: #f9f9f9;
+            border-radius: 5px;
+            box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+        }
+
+        .category button {
+            width: auto;
+            padding: 5px 15px;
+            background-color: #2196F3;
+            border-radius: 5px;
+            font-size: 14px;
+            cursor: pointer;
+        }
+
+        .category button:hover {
+            background-color: #1976D2;
+        }
+
+        .product img {
+            width: 50px;
+            height: 50px;
+            object-fit: cover;
+            border-radius: 5px;
+        }
+
+        .product a {
+            text-decoration: none;
+            color: #2196F3;
+            font-size: 14px;
+        }
+
+        .product a:hover {
+            text-decoration: underline;
+        }
+
+        .no-data {
+            text-align: center;
+            font-size: 16px;
+            color: #999;
+        }
+    </style>
+</head>
+<body>
+    <h3>Categorías de Plaza Vea</h3>
+    <p>*Presione Compra por Categorias para habilitar</p>
+    <button id="scrapeBtn">Obtener Categorías</button>
+    <button id="downloadButton">Descargar productos</button>
+
+    <div id="categories">
+        <p class="no-data">No hay productos disponibles.</p>
+    </div>
+
+    <div id="products">
+        <p class="no-data">No hay productos disponibles.</p>
+    </div>
+
+    <script src="index.js"></script>
+</body>
+</html>

@@ -1,0 +1,34 @@
+{
+    "name" : "Reto Scrapping",
+    "description" : "Descripcion",
+    "manifest_version": 3,
+    "version": "1.0",
+    "permissions": [
+        "activeTab",
+        "scripting",
+        "tabs",
+        "storage",
+        "notifications",
+        "downloads"
+    ],
+    "background": {
+        "service_worker": "background.js"
+    },
+    "content_scripts": [
+        {
+            "matches": [
+                "https://www.plazavea.com.pe/*"
+            ],
+            "js": [
+                "contentscripts.js"
+            ]
+        }
+    ],
+    "action": {
+        "default_popup": "index.html"
+    },
+    "icons": {
+        "128": "codigo.png"
+    }
+
+}
